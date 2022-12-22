@@ -20,9 +20,7 @@
             "env": [
                 {
                     "name": "TZ",
-                    "default": "America/Chicago",
-                    "description": "Specify a timezone to use",
-                    "label": ""
+                    "default": "America/Chicago"
                 },
                 {
                     "name": "PUID",
@@ -448,7 +446,6 @@
                     "name": "PGID"
                 },
                 {
-                    "label": "TZ",
                     "name": "TZ",
                     "default": "America/Chicago"
                 },
@@ -1508,9 +1505,7 @@
                 },
                 {
                     "name": "TZ",
-                    "label": "TZ",
-                    "default": "America/Chicago",
-                    "description": "Specify a timezone to use for example America/Chicago"
+                    "default": "America/Chicago"
                 }
             ],
             "ports": [
@@ -2204,7 +2199,6 @@
                     "name": "APP_KEY"
                 },
                 {
-                    "label": "TZ",
                     "name": "TZ",
                     "default": "America/Chicago"
                 },
@@ -3397,7 +3391,6 @@
                     "name": "PGID"
                 },
                 {
-                    "label": "TZ",
                     "name": "TZ",
                     "default": "America/Chicago"
                 },
@@ -3679,9 +3672,7 @@
                 },
                 {
                     "name": "TZ",
-                    "default": "America/Chicago",
-                    "description": "#optional",
-                    "label": ""
+                    "default": "America/Chicago"
                 },
                 {
                     "name": "PUBLIC_KEY",
@@ -3832,7 +3823,6 @@
                     "name": "PGID"
                 },
                 {
-                    "label": "TZ",
                     "name": "TZ",
                     "default": "America/Chicago"
                 },
@@ -3976,7 +3966,6 @@
                     "name": "PGID"
                 },
                 {
-                    "label": "TZ",
                     "name": "TZ",
                     "default": "America/Chicago"
                 },
