@@ -2510,7 +2510,7 @@
 				"type": 1
 			},
 			{
-				"type": 3,
+				"type": 2,
 				"name": "klaxon",
 				"title": "Klaxon",
 				"description": "Klaxon is a free, quick to set up and easy to use robot that checks websites regularly so you don't have to.",
