@@ -287,13 +287,13 @@
             ],
             "image": "hotio/bazarr:release",
             "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/bazarr.png",
-            "name": "Bazarr",
+            "name": "Servarr - Bazarr",
             "platform": "linux",
             "ports": [
                 "6767:6767/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "Servarr - Bazarr",
+            "title": "Bazarr",
             "type": 1,
             "volumes": [
                 {
