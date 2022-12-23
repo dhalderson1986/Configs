@@ -287,7 +287,7 @@
             ],
             "image": "hotio/bazarr:release",
             "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/bazarr.png",
-            "name": "Bazarr",
+            "name": "Servarr - Bazarr",
             "platform": "linux",
             "ports": [
                 "6767:6767/tcp"
@@ -2802,7 +2802,7 @@
             ],
             "image": "hotio/lidarr:release",
             "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/lidarr.png",
-            "name": "lidarr",
+            "name": "Servarr - Lidarr",
             "platform": "linux",
             "ports": [
                 "8686:8686/tcp"
@@ -4616,7 +4616,7 @@
             ],
             "image": "ghcr.io/linuxserver/prowlarr:develop",
             "logo": "https://raw.githubusercontent.com/xneo1/portainer_templates/master/Images/prowlarr.png",
-            "name": "prowlarr",
+            "name": "Servarr - Prowlarr",
             "platform": "linux",
             "ports": [
                 "9696:9696/tcp"
@@ -4739,7 +4739,7 @@
             ],
             "image": "hotio/radarr:release",
             "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/radarr.png",
-            "name": "radarr",
+            "name": "Servarr - Radarr",
             "platform": "linux",
             "ports": [
                 "7878:7878/tcp"
@@ -4829,7 +4829,7 @@
             ],
             "image": "hotio/readarr:nightly",
             "logo": "https://raw.githubusercontent.com/Readarr/Readarr/develop/Logo/128.png",
-            "name": "Readerr",
+            "name": "Servarr - Readarr",
             "platform": "linux",
             "ports": [
                 "8787:8787/tcp"
@@ -5277,7 +5277,7 @@
             ],
             "image": "hotio/sonarr:release",
             "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/sonarr-icon.png",
-            "name": "sonarr",
+            "name": "Servarr - Sonarr",
             "platform": "linux",
             "ports": [
                 "8989:8989/tcp"
