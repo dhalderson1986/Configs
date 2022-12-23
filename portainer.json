@@ -287,13 +287,13 @@
             ],
             "image": "hotio/bazarr:release",
             "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/bazarr.png",
-            "name": "Servarr - Bazarr",
+            "name": "Bazarr",
             "platform": "linux",
             "ports": [
                 "6767:6767/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "Bazarr",
+            "title": "Servarr - Bazarr",
             "type": 1,
             "volumes": [
                 {
@@ -2808,7 +2808,7 @@
                 "8686:8686/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "Lidarr",
+            "title": "Servarr - Lidarr",
             "type": 1,
             "volumes": [
                 {
@@ -4622,7 +4622,7 @@
                 "9696:9696/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "Prowlarr",
+            "title": "Servarr - Prowlarr",
             "type": 1,
             "volumes": [
                 {
@@ -4745,7 +4745,7 @@
                 "7878:7878/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "Radarr",
+            "title": "Servarr - Radarr",
             "type": 1,
             "volumes": [
                 {
@@ -4835,7 +4835,7 @@
                 "8787:8787/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "Readarr",
+            "title": "Servarr - Readarr",
             "type": 1,
             "volumes": [
                 {
@@ -5283,7 +5283,7 @@
                 "8989:8989/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "Sonarr",
+            "title": "Servarr - Sonarr",
             "type": 1,
             "volumes": [
                 {
