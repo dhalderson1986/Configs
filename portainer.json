@@ -293,7 +293,7 @@
                 "6767:6767/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "Bazarr",
+            "title": "Servarr - Bazarr",
             "type": 1,
             "volumes": [
                 {
