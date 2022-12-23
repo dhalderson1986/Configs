@@ -266,52 +266,6 @@
         },
         {
             "categories": [
-                "Usenet Server"
-            ],
-            "description": "Bazarr is a companion application to Sonarr and Radarr. It can manage and download subtitles based on your requirements. You define your preferences by TV show or movie and Bazarr takes care of everything for you.",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                },
-                {
-                    "label": "TZ",
-                    "name": "TZ"
-                }
-            ],
-            "image": "hotio/bazarr:release",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/bazarr.png",
-            "name": "Servarr - Bazarr",
-            "platform": "linux",
-            "ports": [
-                "6767:6767/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "Servarr - Bazarr",
-            "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/Bazarr",
-                    "container": "/config"
-                },
-                {
-                    "bind": "/portainer/TV",
-                    "container": "/tv"
-                },
-                {
-                    "bind": "/portainer/Movies",
-                    "container": "/movies"
-                }
-            ]
-        },
-        {
-            "categories": [
                 "Music Server"
             ],
             "description": "The purpose of beets is to get your music collection right once and for all. It catalogs your collection, automatically improving its metadata as it goes using the MusicBrainz database. Then it provides a bouquet of tools for manipulating and accessing your music.",
@@ -2784,48 +2738,6 @@
             ]
         },
         {
-            "categories": [
-                "Usenet Server"
-            ],
-            "description": "Lidarr is a music collection manager for Usenet and BitTorrent users.",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "hotio/lidarr:release",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/lidarr.png",
-            "name": "Servarr - Lidarr",
-            "platform": "linux",
-            "ports": [
-                "8686:8686/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "Servarr - Lidarr",
-            "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/Lidarr",
-                    "container": "/config"
-                },
-                {
-                    "bind": "/portainer/Downloads",
-                    "container": "/downloads"
-                },
-                {
-                    "bind": "/portainer/Music",
-                    "container": "/music"
-                }
-            ]
-        },
-        {
             "type": 1,
             "categories": [
                 "Code Server"
@@ -4598,40 +4510,6 @@
             ]
         },
         {
-            "categories": [
-                "Usenet Server"
-            ],
-            "description": "Prowlarr is a indexer manager/proxy built on the popular arr .net/reactjs base stack to integrate with your various PVR apps. Prowlarr supports both Torrent Trackers and Usenet Indexers. It integrates seamlessly with Sonarr, Radarr, Lidarr, and Readarr offering complete management of your indexers with no per app Indexer setup required (we do it all).",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "ghcr.io/linuxserver/prowlarr:develop",
-            "logo": "https://raw.githubusercontent.com/xneo1/portainer_templates/master/Images/prowlarr.png",
-            "name": "Servarr - Prowlarr",
-            "platform": "linux",
-            "ports": [
-                "9696:9696/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "Servarr - Prowlarr",
-            "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/Prowlarr",
-                    "container": "/config"
-                }
-            ]
-        },
-        {
             "type": 1,
             "title": "Pwndrop",
             "name": "Pwndrop",
@@ -4721,48 +4599,6 @@
             ]
         },
         {
-            "categories": [
-                "Usenet Server"
-            ],
-            "description": "Radarr - A fork of Sonarr to work with movies à la Couchpotato.",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "hotio/radarr:release",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/radarr.png",
-            "name": "Servarr - Radarr",
-            "platform": "linux",
-            "ports": [
-                "7878:7878/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "Servarr - Radarr",
-            "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/Radarr",
-                    "container": "/config"
-                },
-                {
-                    "bind": "/portainer/Downloads",
-                    "container": "/downloads"
-                },
-                {
-                    "bind": "/portainer/Movies",
-                    "container": "/movies"
-                }
-            ]
-        },
-        {
             "type": 1,
             "categories": [
                 "Management Utility Server"
@@ -4809,48 +4645,6 @@
                 }
             ],
             "restart_policy": "unless-stopped"
-        },
-        {
-            "categories": [
-                "Usenet Server"
-            ],
-            "description": "Readarr usent server",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "1000",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "hotio/readarr:nightly",
-            "logo": "https://raw.githubusercontent.com/Readarr/Readarr/develop/Logo/128.png",
-            "name": "Servarr - Readarr",
-            "platform": "linux",
-            "ports": [
-                "8787:8787/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "Servarr - Readarr",
-            "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/Readarr",
-                    "container": "/config"
-                },
-                {
-                    "bind": "/portainer/Downloads",
-                    "container": "/downloads"
-                },
-                {
-                    "bind": "/portainer/books",
-                    "container": "/books"
-                }
-            ]
         },
         {
             "categories": [
@@ -5036,6 +4830,258 @@
                 {
                     "bind": "/portainer/Downloads/incomplete",
                     "container": "/incomplete-downloads"
+                }
+            ]
+        },
+        {
+            "categories": [
+                "Usenet Server"
+            ],
+            "description": "Bazarr is a companion application to Sonarr and Radarr. It can manage and download subtitles based on your requirements. You define your preferences by TV show or movie and Bazarr takes care of everything for you.",
+            "env": [
+                {
+                    "default": "1000",
+                    "label": "PUID",
+                    "name": "PUID"
+                },
+                {
+                    "default": "100",
+                    "label": "PGID",
+                    "name": "PGID"
+                },
+                {
+                    "label": "TZ",
+                    "name": "TZ"
+                }
+            ],
+            "image": "hotio/bazarr:release",
+            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/bazarr.png",
+            "name": "Servarr - Bazarr",
+            "platform": "linux",
+            "ports": [
+                "6767:6767/tcp"
+            ],
+            "restart_policy": "unless-stopped",
+            "title": "Servarr - Bazarr",
+            "type": 1,
+            "volumes": [
+                {
+                    "bind": "/portainer/Files/AppData/Config/Bazarr",
+                    "container": "/config"
+                },
+                {
+                    "bind": "/portainer/TV",
+                    "container": "/tv"
+                },
+                {
+                    "bind": "/portainer/Movies",
+                    "container": "/movies"
+                }
+            ]
+        },
+        {
+            "categories": [
+                "Usenet Server"
+            ],
+            "description": "Lidarr is a music collection manager for Usenet and BitTorrent users.",
+            "env": [
+                {
+                    "default": "1000",
+                    "label": "PUID",
+                    "name": "PUID"
+                },
+                {
+                    "default": "100",
+                    "label": "PGID",
+                    "name": "PGID"
+                }
+            ],
+            "image": "hotio/lidarr:release",
+            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/lidarr.png",
+            "name": "Servarr - Lidarr",
+            "platform": "linux",
+            "ports": [
+                "8686:8686/tcp"
+            ],
+            "restart_policy": "unless-stopped",
+            "title": "Servarr - Lidarr",
+            "type": 1,
+            "volumes": [
+                {
+                    "bind": "/portainer/Files/AppData/Config/Lidarr",
+                    "container": "/config"
+                },
+                {
+                    "bind": "/portainer/Downloads",
+                    "container": "/downloads"
+                },
+                {
+                    "bind": "/portainer/Music",
+                    "container": "/music"
+                }
+            ]
+        },
+        {
+            "categories": [
+                "Usenet Server"
+            ],
+            "description": "Prowlarr is a indexer manager/proxy built on the popular arr .net/reactjs base stack to integrate with your various PVR apps. Prowlarr supports both Torrent Trackers and Usenet Indexers. It integrates seamlessly with Sonarr, Radarr, Lidarr, and Readarr offering complete management of your indexers with no per app Indexer setup required (we do it all).",
+            "env": [
+                {
+                    "default": "1000",
+                    "label": "PUID",
+                    "name": "PUID"
+                },
+                {
+                    "default": "100",
+                    "label": "PGID",
+                    "name": "PGID"
+                }
+            ],
+            "image": "ghcr.io/linuxserver/prowlarr:develop",
+            "logo": "https://raw.githubusercontent.com/xneo1/portainer_templates/master/Images/prowlarr.png",
+            "name": "Servarr - Prowlarr",
+            "platform": "linux",
+            "ports": [
+                "9696:9696/tcp"
+            ],
+            "restart_policy": "unless-stopped",
+            "title": "Servarr - Prowlarr",
+            "type": 1,
+            "volumes": [
+                {
+                    "bind": "/portainer/Files/AppData/Config/Prowlarr",
+                    "container": "/config"
+                }
+            ]
+        },
+        {
+            "categories": [
+                "Usenet Server"
+            ],
+            "description": "Radarr - A fork of Sonarr to work with movies à la Couchpotato.",
+            "env": [
+                {
+                    "default": "1000",
+                    "label": "PUID",
+                    "name": "PUID"
+                },
+                {
+                    "default": "100",
+                    "label": "PGID",
+                    "name": "PGID"
+                }
+            ],
+            "image": "hotio/radarr:release",
+            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/radarr.png",
+            "name": "Servarr - Radarr",
+            "platform": "linux",
+            "ports": [
+                "7878:7878/tcp"
+            ],
+            "restart_policy": "unless-stopped",
+            "title": "Servarr - Radarr",
+            "type": 1,
+            "volumes": [
+                {
+                    "bind": "/portainer/Files/AppData/Config/Radarr",
+                    "container": "/config"
+                },
+                {
+                    "bind": "/portainer/Downloads",
+                    "container": "/downloads"
+                },
+                {
+                    "bind": "/portainer/Movies",
+                    "container": "/movies"
+                }
+            ]
+        },
+        {
+            "categories": [
+                "Usenet Server"
+            ],
+            "description": "Readarr usent server",
+            "env": [
+                {
+                    "default": "1000",
+                    "label": "PUID",
+                    "name": "PUID"
+                },
+                {
+                    "default": "1000",
+                    "label": "PGID",
+                    "name": "PGID"
+                }
+            ],
+            "image": "hotio/readarr:nightly",
+            "logo": "https://raw.githubusercontent.com/Readarr/Readarr/develop/Logo/128.png",
+            "name": "Servarr - Readarr",
+            "platform": "linux",
+            "ports": [
+                "8787:8787/tcp"
+            ],
+            "restart_policy": "unless-stopped",
+            "title": "Servarr - Readarr",
+            "type": 1,
+            "volumes": [
+                {
+                    "bind": "/portainer/Files/AppData/Config/Readarr",
+                    "container": "/config"
+                },
+                {
+                    "bind": "/portainer/Downloads",
+                    "container": "/downloads"
+                },
+                {
+                    "bind": "/portainer/books",
+                    "container": "/books"
+                }
+            ]
+        },
+        {
+            "categories": [
+                "Usenet Server"
+            ],
+            "description": "Sonarr (formerly NZBdrone) is a PVR for usenet and bittorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.",
+            "env": [
+                {
+                    "default": "1000",
+                    "label": "PUID",
+                    "name": "PUID"
+                },
+                {
+                    "default": "100",
+                    "label": "PGID",
+                    "name": "PGID"
+                }
+            ],
+            "image": "hotio/sonarr:release",
+            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/sonarr-icon.png",
+            "name": "Servarr - Sonarr",
+            "platform": "linux",
+            "ports": [
+                "8989:8989/tcp"
+            ],
+            "restart_policy": "unless-stopped",
+            "title": "Servarr - Sonarr",
+            "type": 1,
+            "volumes": [
+                {
+                    "bind": "/portainer/Files/AppData/Config/Sonarr",
+                    "container": "/config"
+                },
+                {
+                    "bind": "/dev/rtc",
+                    "container": "/dev/rtc"
+                },
+                {
+                    "bind": "/portainer/TV",
+                    "container": "/tv"
+                },
+                {
+                    "bind": "/portainer/Downloads",
+                    "container": "/downloads"
                 }
             ]
         },
@@ -5257,52 +5303,6 @@
                 }
             ],
             "restart_policy": "unless-stopped"
-        },
-        {
-            "categories": [
-                "Usenet Server"
-            ],
-            "description": "Sonarr (formerly NZBdrone) is a PVR for usenet and bittorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "hotio/sonarr:release",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/sonarr-icon.png",
-            "name": "Servarr - Sonarr",
-            "platform": "linux",
-            "ports": [
-                "8989:8989/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "Servarr - Sonarr",
-            "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/Sonarr",
-                    "container": "/config"
-                },
-                {
-                    "bind": "/dev/rtc",
-                    "container": "/dev/rtc"
-                },
-                {
-                    "bind": "/portainer/TV",
-                    "container": "/tv"
-                },
-                {
-                    "bind": "/portainer/Downloads",
-                    "container": "/downloads"
-                }
-            ]
         },
         {
             "categories": [
