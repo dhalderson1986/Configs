@@ -8,7 +8,7 @@
             "categories": [
                 "Music Server"
             ],
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/airsonic-advanced/config<br>mkdir -p /volume1/docker/airsonic-advanced/music<br>mkdir -p /volume1/docker/airsonic-advanced/playlists<br>mkdir -p /volume1/docker/airsonic-advanced/podcasts<br>mkdir -p /volume1/docker/airsonic-advanced/media</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/airsonic-advanced/config<br>mkdir -p /S/utilities/airsonic-advanced/music<br>mkdir -p /S/utilities/airsonic-advanced/playlists<br>mkdir -p /S/utilities/airsonic-advanced/podcasts<br>mkdir -p /S/utilities/airsonic-advanced/media</p>",
             "description": "[Airsonic-advanced](https://github.com/airsonic-advanced/airsonic-advanced) is a free, web-based media streamer, providing ubiquitious access to your music. Use it to share your music with friends, or to listen to your own music while at work. You can stream to multiple players simultaneously, for instance to one player in your kitchen and another in your living room.",
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/airsonic-banner.png",
@@ -17,20 +17,19 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 },
                 {
                     "name": "CONTEXT_PATH",
@@ -51,23 +50,23 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/airsonic-advanced/config"
+                    "bind": "/S/utilities/airsonic-advanced/config"
                 },
                 {
                     "container": "/music",
-                    "bind": "/volume1/docker/airsonic-advanced/music"
+                    "bind": "/S/utilities/airsonic-advanced/music"
                 },
                 {
                     "container": "/playlists",
-                    "bind": "/volume1/docker/airsonic-advanced/playlists"
+                    "bind": "/S/utilities/airsonic-advanced/playlists"
                 },
                 {
                     "container": "/podcasts",
-                    "bind": "/volume1/docker/airsonic-advanced/podcasts"
+                    "bind": "/S/utilities/airsonic-advanced/podcasts"
                 },
                 {
                     "container": "/media",
-                    "bind": "/volume1/docker/airsonic-advanced/media"
+                    "bind": "/S/utilities/airsonic-advanced/media"
                 }
             ],
             "restart_policy": "unless-stopped"
@@ -76,7 +75,7 @@
             "type": 1,
             "title": "Apprise-api",
             "name": "Apprise-api",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/apprise-api/config</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/apprise-api/config</p>",
             "description": "[Apprise-api](https://github.com/caronc/apprise-api) Takes advantage of [Apprise](https://github.com/caronc/apprise) through your network with a user-friendly API. * Send notifications to more then 65+ services. * An incredibly lightweight gateway to Apprise. * A production ready micro-service at your disposal. Apprise API was designed to easily fit into existing (and new) eco-systems that are looking for a simple notification solution.",
             "categories": [
                 "Task Server"
@@ -88,20 +87,19 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 }
             ],
             "ports": [
@@ -110,7 +108,7 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/apprise-api/config"
+                    "bind": "/S/utilities/apprise-api/config"
                 }
             ],
             "restart_policy": "unless-stopped"
@@ -122,7 +120,7 @@
             ],
             "title": "Audacity",
             "name": "Audacity",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/audacity/config</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/audacity/config</p>",
             "description": "[Audacity](https://www.audacityteam.org/) is an easy-to-use, multi-track audio editor and recorder. Developed by a group of volunteers as open source.",
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/audacity-logo.png",
@@ -131,20 +129,19 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 }
             ],
             "ports": [
@@ -153,7 +150,7 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/audacity/config"
+                    "bind": "/S/utilities/audacity/config"
                 }
             ],
             "restart_policy": "unless-stopped"
@@ -187,7 +184,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Audiobookshelf",
+                    "bind": "/S/utilities/Audiobookshelf/config",
                     "container": "/config"
                 },
                 {
@@ -228,7 +225,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Authelia",
+                    "bind": "/S/utilities/Authelia",
                     "container": "/etc/authelia/"
                 }
             ]
@@ -293,15 +290,15 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Beets",
+                    "bind": "/S/utilities/Beets/config",
                     "container": "/config"
                 },
                 {
-                    "bind": "/portainer/Downloads",
+                    "bind": "/S/transfers/downloads",
                     "container": "/downloads"
                 },
                 {
-                    "bind": "/portainer/Music",
+                    "bind": "/S/plex/music",
                     "container": "/music"
                 }
             ]
@@ -348,7 +345,7 @@
                     "container": "/podcast"
                 },
                 {
-                    "bind": "/portainer/Files/AppData/Config/Booksonic",
+                    "bind": "/S/utilities/Booksonic/config",
                     "container": "/config"
                 }
             ]
@@ -360,7 +357,7 @@
             ],
             "title": "Booksonic-air",
             "name": "Booksonic-air",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/booksonic-air/config<br>mkdir -p /volume1/docker/booksonic-air/audiobooks<br>mkdir -p /volume1/docker/booksonic-air/podcasts<br>mkdir -p /volume1/docker/booksonic-air/othermedia</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/booksonic-air/config<br>mkdir -p /S/utilities/booksonic-air/audiobooks<br>mkdir -p /S/utilities/booksonic-air/podcasts<br>mkdir -p /S/utilities/booksonic-air/othermedia</p>",
             "description": "[Booksonic-air](http://booksonic.org) is a platform for accessing the audibooks you own wherever you are. At the moment the platform consists of Booksonic Air - A server for streaming your audiobooks, successor to the original Booksonic server and based on Airsonic. Booksonic App - An DSub based Android app for connection to Booksonic-Air servers. .",
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/booksonic-air.png",
@@ -369,20 +366,19 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 },
                 {
                     "name": "CONTEXT_PATH",
@@ -397,19 +393,20 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/booksonic-air/config"
+                    "bind": "/S/utilities/booksonic-air/config"
                 },
                 {
-                    "container": "/audiobooks",
-                    "bind": "/volume1/docker/booksonic-air/audiobooks"
+                    "container": "/audiobooks/config",
+                    "container": "/config",
+                    "bind": "/S/utilities/booksonic-air/audiobooks"
                 },
                 {
                     "container": "/podcasts",
-                    "bind": "/volume1/docker/booksonic-air/podcasts"
+                    "bind": "/S/utilities/booksonic-air/podcasts"
                 },
                 {
                     "container": "/othermedia",
-                    "bind": "/volume1/docker/booksonic-air/othermedia"
+                    "bind": "/S/utilities/booksonic-air/othermedia"
                 }
             ],
             "restart_policy": "unless-stopped"
@@ -464,7 +461,7 @@
             ],
             "title": "Calibre",
             "name": "Calibre",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/calibre/config</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/calibre/config</p>",
             "description": "Calibre is a powerful and easy to use e-book manager. Users say it’s outstanding and a must-have. It’ll allow you to do nearly everything and it takes things a step beyond normal e-book software. It’s also completely free and open source and great for both casual users and computer experts.",
             "platform": "linux",
             "logo": "https://github.com/kovidgoyal/calibre/raw/master/resources/images/lt.png",
@@ -473,20 +470,19 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 },
                 {
                     "name": "PASSWORD",
@@ -508,7 +504,7 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/calibre/config"
+                    "bind": "/S/utilities/calibre/config"
                 }
             ],
             "restart_policy": "unless-stopped"
@@ -547,7 +543,7 @@
                     "container": "/books"
                 },
                 {
-                    "bind": "/portainer/Files/AppData/Config/Calibre-web",
+                    "bind": "/S/utilities/Calibre-web/config",
                     "container": "/config"
                 }
             ]
@@ -627,7 +623,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Chowdown",
+                    "bind": "/S/utilities/Chowdown/config",
                     "container": "/config"
                 }
             ]
@@ -639,7 +635,7 @@
             ],
             "title": "Cloud9",
             "name": "Cloud9",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/cloud9/config<br>mkdir -p /volume1/docker/cloud9/code<br></p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/cloud9/config<br>mkdir -p /S/utilities/cloud9/code<br></p>",
             "description": "[Cloud9](https://github.com/c9/core) Cloud9 is a complete web based IDE with terminal access. This container is for running their core SDK locally and developing plugins.",
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/cloud9.png",
@@ -648,20 +644,19 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 },
                 {
                     "name": "GITURL",
@@ -688,11 +683,11 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/cloud9/config"
+                    "bind": "/S/utilities/cloud9/config"
                 },
                 {
                     "container": "/code",
-                    "bind": "/volume1/docker/cloud9/code"
+                    "bind": "/S/utilities/cloud9/code"
                 },
                 {
                     "container": "/var/run/docker.sock",
@@ -747,7 +742,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Code-Server",
+                    "bind": "/S/utilities/Code-Server/config",
                     "container": "/config"
                 }
             ]
@@ -781,7 +776,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Codiad",
+                    "bind": "/S/utilities/Codiad/config",
                     "container": "/config"
                 }
             ]
@@ -819,7 +814,7 @@
                     "container": "/books"
                 },
                 {
-                    "bind": "/portainer/Files/AppData/Config/Cops",
+                    "bind": "/S/utilities/Cops/config",
                     "container": "/config"
                 }
             ]
@@ -853,15 +848,15 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Couchpotato",
+                    "bind": "/S/utilities/Couchpotato/config",
                     "container": "/config"
                 },
                 {
-                    "bind": "/portainer/Downloads",
+                    "bind": "/S/transfers/downloads",
                     "container": "/downloads"
                 },
                 {
-                    "bind": "/portainer/Movies",
+                    "bind": "/S/plex/movies",
                     "container": "/movies"
                 }
             ]
@@ -892,11 +887,11 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Daapd",
+                    "bind": "/S/utilities/Daapd/config",
                     "container": "/config"
                 },
                 {
-                    "bind": "/portainer/Music",
+                    "bind": "/S/plex/music",
                     "container": "/music"
                 }
             ]
@@ -918,7 +913,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Dashmachine",
+                    "bind": "/S/utilities/Dashmachine/user_data",
                     "container": "/dashmachine/dashmachine/user_data"
                 }
             ]
@@ -968,11 +963,11 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Davos",
+                    "bind": "/S/utilities/Davos/config",
                     "container": "/config"
                 },
                 {
-                    "bind": "/portainer/Downloads",
+                    "bind": "/S/transfers/downloads",
                     "container": "/downloads"
                 }
             ]
@@ -1008,11 +1003,11 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Deluge",
+                    "bind": "/S/utilities/Deluge/config",
                     "container": "/config"
                 },
                 {
-                    "bind": "/portainer/Downloads",
+                    "bind": "/S/transfers/downloads",
                     "container": "/downloads"
                 }
             ]
@@ -1024,7 +1019,7 @@
             ],
             "title": "Dokuwiki",
             "name": "Dokuwiki",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/dokuwiki/config</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/dokuwiki/config</p>",
             "description": "[Dokuwiki](https://www.dokuwiki.org/dokuwiki/) is a simple to use and highly versatile Open Source wiki software that doesn't require a database. It is loved by users for its clean and readable syntax. The ease of maintenance, backup and integration makes it an administrator's favorite. Built in access controls and authentication connectors make DokuWiki especially useful in the enterprise context and the large number of plugins contributed by its vibrant community allow for a broad range of use cases beyond a traditional wiki.",
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/dokuwiki-icon.png",
@@ -1033,20 +1028,19 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 }
             ],
             "ports": [
@@ -1056,7 +1050,7 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/dokuwiki/config"
+                    "bind": "/S/utilities/dokuwiki/config"
                 }
             ],
             "restart_policy": "unless-stopped"
@@ -1092,7 +1086,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Domoticz",
+                    "bind": "/S/utilities/Domoticz/config",
                     "container": "/config"
                 }
             ]
@@ -1178,7 +1172,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Duplicati",
+                    "bind": "/S/utilities/Duplicati/config",
                     "container": "/config"
                 },
                 {
@@ -1226,15 +1220,15 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Emby",
+                    "bind": "/S/utilities/Emby/config",
                     "container": "/config"
                 },
                 {
-                    "bind": "/portainer/TV",
+                    "bind": "/S/plex/tv",
                     "container": "/data/tvshows"
                 },
                 {
-                    "bind": "/portainer/Movies",
+                    "bind": "/S/plex/movies",
                     "container": "/data/movies"
                 }
             ]
@@ -1257,7 +1251,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/EmbyStat",
+                    "bind": "/S/utilities/EmbyStat/config",
                     "container": "/config"
                 }
             ]
@@ -1269,7 +1263,7 @@
             ],
             "title": "Emulatorjs",
             "name": "Emulatorjs",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/emulatorjs/config<br>mkdir -p /volume1/docker/emulatorjs/data</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/emulatorjs/config<br>mkdir -p /S/utilities/emulatorjs/data</p>",
             "description": "[Emulatorjs](https://github.com/linuxserver/emulatorjs) - In browser web based emulation portable to nearly any device for many retro consoles. A mix of emulators is used between Libretro and EmulatorJS.",
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/emulatorjs-logo.png",
@@ -1278,20 +1272,19 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 },
                 {
                     "name": "SUBFOLDER",
@@ -1308,11 +1301,11 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/emulatorjs/config"
+                    "bind": "/S/utilities/emulatorjs/config"
                 },
                 {
                     "container": "/data",
-                    "bind": "/volume1/docker/emulatorjs/data"
+                    "bind": "/S/utilities/emulatorjs/data"
                 }
             ],
             "restart_policy": "unless-stopped"
@@ -1324,7 +1317,7 @@
             ],
             "title": "Endlessh",
             "name": "Endlessh",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/endlessh/config</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/endlessh/config</p>",
             "description": "[Endlessh](https://github.com/skeeto/endlessh) is an SSH tarpit that very slowly sends an endless, random SSH banner. It keeps SSH clients locked up for hours or even days at a time. The purpose is to put your real SSH server on another port and then let the script kiddies get stuck in this tarpit instead of bothering a real server.",
             "platform": "linux",
             "logo": "https://github.com/linuxserver/docker-templates/raw/master/linuxserver.io/img/openssh-server-logo.png",
@@ -1333,20 +1326,19 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 },
                 {
                     "name": "MSDELAY",
@@ -1385,7 +1377,7 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/endlessh/config"
+                    "bind": "/S/utilities/endlessh/config"
                 }
             ],
             "restart_policy": "unless-stopped"
@@ -1428,7 +1420,7 @@
             ],
             "title": "Ffmpeg",
             "name": "Ffmpeg",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/ffmpeg/config</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/ffmpeg/config</p>",
             "description": "This container needs special attention. Please check https://hub.docker.com/r/linuxserver/ffmpeg for details.",
             "platform": "linux",
             "logo": "",
@@ -1437,20 +1429,19 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 }
             ],
             "ports": [
@@ -1459,7 +1450,7 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/ffmpeg/config"
+                    "bind": "/S/utilities/ffmpeg/config"
                 }
             ],
             "restart_policy": "unless-stopped"
@@ -1482,11 +1473,11 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/FileBrowser",
+                    "bind": "/S/utilities/FileBrowser/config",
                     "container": "/config"
                 },
                 {
-                    "bind": "/portainer/Files/AppData/Config",
+                    "bind": "/S/utilities/Config",
                     "container": "/myfiles"
                 }
             ]
@@ -1498,7 +1489,7 @@
             ],
             "title": "Filezilla",
             "name": "Filezilla",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/filezilla/config</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/filezilla/config</p>",
             "description": "[FIleZilla](https://filezilla-project.org/) Client is a fast and reliable cross-platform FTP, FTPS and SFTP client with lots of useful features and an intuitive graphical user interface.",
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/filezilla-logo.png",
@@ -1507,20 +1498,19 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 }
             ],
             "ports": [
@@ -1529,7 +1519,7 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/filezilla/config"
+                    "bind": "/S/utilities/filezilla/config"
                 }
             ],
             "restart_policy": "unless-stopped"
@@ -1541,7 +1531,7 @@
             ],
             "title": "Firefox",
             "name": "Firefox",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/firefox/config</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/firefox/config</p>",
             "description": "[Firefox](https://www.mozilla.org/en-US/firefox/) Browser, also known as Mozilla Firefox or simply Firefox, is a free and open-source web browser developed by the Mozilla Foundation and its subsidiary, the Mozilla Corporation. Firefox uses the Gecko layout engine to render web pages, which implements current and anticipated web standards.",
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/firefox-logo.png",
@@ -1550,20 +1540,19 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 }
             ],
             "ports": [
@@ -1572,7 +1561,7 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/firefox/config"
+                    "bind": "/S/utilities/firefox/config"
                 }
             ],
             "restart_policy": "unless-stopped"
@@ -1594,7 +1583,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/flame-dashboard",
+                    "bind": "/S/utilities/flame-dashboard",
                     "container": "/app/data"
                 }
             ]
@@ -1606,7 +1595,7 @@
             ],
             "title": "Foldingathome",
             "name": "Foldingathome",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/foldingathome/config</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/foldingathome/config</p>",
             "description": "[Folding@home](https://foldingathome.org/) is a distributed computing project for simulating protein dynamics, including the process of protein folding and the movements of proteins implicated in a variety of diseases. It brings together citizen scientists who volunteer to run simulations of protein dynamics on their personal computers. Insights from this data are helping scientists to better understand biology, and providing new opportunities for developing therapeutics.",
             "platform": "linux",
             "logo": "https://foldingathome.org/wp-content/uploads/2016/09/folding-at-home-logo.png",
@@ -1615,20 +1604,19 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 }
             ],
             "ports": [
@@ -1638,7 +1626,7 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/foldingathome/config"
+                    "bind": "/S/utilities/foldingathome/config"
                 }
             ],
             "restart_policy": "unless-stopped"
@@ -1691,7 +1679,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/freshrss",
+                    "bind": "/S/utilities/freshrss/config",
                     "container": "/config"
                 }
             ]
@@ -1737,7 +1725,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Gazee",
+                    "bind": "/S/utilities/Gazee/config",
                     "container": "/config"
                 },
                 {
@@ -1745,7 +1733,7 @@
                     "container": "/comics"
                 },
                 {
-                    "bind": "/portainer/Files/AppData/Gazee",
+                    "bind": "/S/utilities/Gazee",
                     "container": "/mylar"
                 }
             ]
@@ -1857,7 +1845,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Grocy",
+                    "bind": "/S/utilities/Grocy/config",
                     "container": "/config"
                 }
             ]
@@ -1880,7 +1868,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Guacamole",
+                    "bind": "/S/utilities/Guacamole/config",
                     "container": "/config"
                 }
             ]
@@ -1892,7 +1880,7 @@
             ],
             "title": "Habridge",
             "name": "Habridge",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/habridge/config</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/habridge/config</p>",
             "description": "Habridge emulates Philips Hue API to other home automation gateways such as an Amazon Echo/Dot Gen 1 (gen 2 has issues discovering ha-bridge) or other systems that support Philips Hue.  [https://github.com/bwssytems/ha-bridge/wiki](https://github.com/bwssytems/ha-bridge/wiki)",
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/bwssytems/ha-bridge/master/src/main/resources/public/img/favicon.ico",
@@ -1901,13 +1889,13 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
@@ -1919,8 +1907,7 @@
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 }
             ],
             "ports": [
@@ -1930,7 +1917,7 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/habridge/config"
+                    "bind": "/S/utilities/habridge/config"
                 }
             ],
             "restart_policy": "unless-stopped"
@@ -1964,15 +1951,15 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Headphones",
+                    "bind": "/S/utilities/Headphones/config",
                     "container": "/config"
                 },
                 {
-                    "bind": "/portainer/Downloads",
+                    "bind": "/S/transfers/downloads",
                     "container": "/Downloads"
                 },
                 {
-                    "bind": "/portainer/Music",
+                    "bind": "/S/plex/music",
                     "container": "/music"
                 }
             ]
@@ -1984,7 +1971,7 @@
             ],
             "title": "Healthchecks",
             "name": "Healthchecks",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/healthchecks/config</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/healthchecks/config</p>",
             "description": "[Healthchecks](https://github.com/healthchecks/healthchecks) is a watchdog for your cron jobs. It's a web server that listens for pings from your cron jobs, plus a web interface.",
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/healthchecks/healthchecks/master/static/img/up.png",
@@ -1993,13 +1980,13 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
@@ -2099,7 +2086,7 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/healthchecks/config"
+                    "bind": "/S/utilities/healthchecks/config"
                 }
             ],
             "restart_policy": "unless-stopped"
@@ -2134,7 +2121,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Heimdall",
+                    "bind": "/S/utilities/Heimdall/config",
                     "container": "/config"
                 }
             ]
@@ -2146,7 +2133,7 @@
             ],
             "title": "Homeassistant",
             "name": "Homeassistant",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/homeassistant/config</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/homeassistant/config</p>",
             "description": "[Home Assistant Core](https://www.home-assistant.io/) - Open source home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts. Perfect to run on a Raspberry Pi or a local server.",
             "platform": "linux",
             "logo": "https://github.com/home-assistant/home-assistant.io/raw/next/source/images/favicon-192x192-full.png",
@@ -2156,20 +2143,19 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 }
             ],
             "ports": [
@@ -2178,7 +2164,7 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/homeassistant/config"
+                    "bind": "/S/utilities/homeassistant/config"
                 }
             ],
             "restart_policy": "unless-stopped"
@@ -2201,11 +2187,11 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Homer/assets",
+                    "bind": "/S/utilities/Homer/assets",
                     "container": "/www/assets"
                 },
                 {
-                    "bind": "/portainer/Files/AppData/Config/Homer",
+                    "bind": "/S/utilities/Homer",
                     "container": "/www/config.yml"
                 }
             ]
@@ -2227,7 +2213,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/huginn",
+                    "bind": "/S/utilities/huginn",
                     "container": "/var/lib/mysql"
                 }
             ]
@@ -2261,11 +2247,11 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Jackett",
+                    "bind": "/S/utilities/Jackett/config",
                     "container": "/config"
                 },
                 {
-                    "bind": "/portainer/Downloads",
+                    "bind": "/S/transfers/downloads",
                     "container": "/downloads"
                 }
             ]
@@ -2304,15 +2290,15 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Jellyfin",
+                    "bind": "/S/utilities/Jellyfin/config",
                     "container": "/config"
                 },
                 {
-                    "bind": "/portainer/TV",
+                    "bind": "/S/plex/tv",
                     "container": "/data/tvshows"
                 },
                 {
-                    "bind": "/portainer/Movies",
+                    "bind": "/S/plex/movies",
                     "container": "/data/movies"
                 }
             ]
@@ -2351,7 +2337,7 @@
             ],
             "title": "Kanzi",
             "name": "Kanzi",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/kanzi/config</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/kanzi/config</p>",
             "description": "[Kanzi](https://lexigr.am/), formerly titled Kodi-Alexa, this custom skill is the ultimate voice remote control for navigating Kodi. It can do anything you can think of (100+ intents). This container also contains lexigram-cli to setup Kanzi with an Amazon Developer Account and automatically deploy it to Amazon.",
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/kanzi.png",
@@ -2360,20 +2346,19 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 },
                 {
                     "name": "INVOCATION_NAME",
@@ -2394,7 +2379,7 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/kanzi/config"
+                    "bind": "/S/utilities/kanzi/config"
                 }
             ],
             "restart_policy": "unless-stopped"
@@ -2471,7 +2456,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Kodi",
+                    "bind": "/S/utilities/Kodi/config",
                     "container": "/config"
                 }
             ]
@@ -2573,8 +2558,7 @@
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 },
                 {
                     "name": "FERNETKEY",
@@ -2667,7 +2651,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/LetsEncrypt",
+                    "bind": "/S/utilities/LetsEncrypt/config",
                     "container": "/config"
                 }
             ]
@@ -2679,7 +2663,7 @@
             ],
             "title": "Libreoffice",
             "name": "Libreoffice",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/libreoffice/config</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/libreoffice/config</p>",
             "description": "[LibreOffice](https://www.libreoffice.org/) is a free and powerful office suite, and a successor to OpenOffice.org (commonly known as OpenOffice). Its clean interface and feature-rich tools help you unleash your creativity and enhance your productivity.",
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/libreoffice-logo.png",
@@ -2688,20 +2672,19 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 }
             ],
             "ports": [
@@ -2710,7 +2693,7 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/libreoffice/config"
+                    "bind": "/S/utilities/libreoffice/config"
                 }
             ],
             "restart_policy": "unless-stopped"
@@ -2732,7 +2715,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/LibreSpeed",
+                    "bind": "/S/utilities/LibreSpeed/config",
                     "container": "/config"
                 }
             ]
@@ -2744,7 +2727,7 @@
             ],
             "title": "Limnoria",
             "name": "Limnoria",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/limnoria/config</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/limnoria/config</p>",
             "description": "[Limnoria](https://github.com/ProgVal/limnoria) A robust, full-featured, and user/programmer-friendly Python IRC bot, with many existing plugins. Successor of the well-known Supybot.",
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/linuxserver/docker-limnoria/master/logo.png",
@@ -2753,20 +2736,19 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 }
             ],
             "ports": [
@@ -2775,7 +2757,7 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/limnoria/config"
+                    "bind": "/S/utilities/limnoria/config"
                 }
             ],
             "restart_policy": "unless-stopped"
@@ -2809,7 +2791,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Lychee",
+                    "bind": "/S/utilities/Lychee/config",
                     "container": "/config"
                 },
                 {
@@ -2892,7 +2874,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Mariadb",
+                    "bind": "/S/utilities/Mariadb/config",
                     "container": "/config"
                 }
             ]
@@ -2956,11 +2938,11 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Mstream",
+                    "bind": "/S/utilities/Mstream/config",
                     "container": "/config"
                 },
                 {
-                    "bind": "/portainer/Downloads",
+                    "bind": "/S/transfers/downloads",
                     "container": "/music"
                 }
             ]
@@ -3050,11 +3032,11 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/MusicBrainz",
+                    "bind": "/S/utilities/MusicBrainz/config",
                     "container": "/config"
                 },
                 {
-                    "bind": "/portainer/Files/AppData/MusicBrainz",
+                    "bind": "/S/utilities/MusicBrainz",
                     "container": "/data"
                 }
             ]
@@ -3088,7 +3070,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Muximux",
+                    "bind": "/S/utilities/Muximux/config",
                     "container": "/config"
                 }
             ]
@@ -3122,11 +3104,11 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Mylar",
+                    "bind": "/S/utilities/Mylar/config",
                     "container": "/config"
                 },
                 {
-                    "bind": "/portainer/Downloads",
+                    "bind": "/S/transfers/downloads",
                     "container": "/downloads"
                 },
                 {
@@ -3167,7 +3149,7 @@
             ],
             "title": "Nano",
             "name": "Nano",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/nano/config</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/nano/config</p>",
             "description": "[Nano](https://nano.org/) is a digital payment protocol designed to be accessible and lightweight, with a focus on removing inefficiencies present in other cryptocurrencies. With ultrafast transactions and zero fees on a secure, green and decentralized network, this makes Nano ideal for everyday transactions.",
             "platform": "linux",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Nano_logo.png/640px-Nano_logo.png",
@@ -3176,20 +3158,19 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 },
                 {
                     "name": "PEER_HOST",
@@ -3242,7 +3223,7 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/nano/config"
+                    "bind": "/S/utilities/nano/config"
                 }
             ],
             "restart_policy": "unless-stopped"
@@ -3302,7 +3283,7 @@
             ],
             "title": "Netbox",
             "name": "Netbox",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/netbox/config</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/netbox/config</p>",
             "description": "[Netbox](https://github.com/netbox-community/netbox) is an IP address management (IPAM) and data center infrastructure management (DCIM) tool. Initially conceived by the network engineering team at DigitalOcean, NetBox was developed specifically to address the needs of network and infrastructure engineers. It is intended to function as a domain-specific source of truth for network operations.",
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/netbox-community/netbox/develop/docs/netbox_logo.png",
@@ -3311,20 +3292,19 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 },
                 {
                     "name": "SUPERUSER_EMAIL",
@@ -3453,7 +3433,7 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/netbox/config"
+                    "bind": "/S/utilities/netbox/config"
                 }
             ],
             "restart_policy": "unless-stopped"
@@ -3532,7 +3512,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Nginx",
+                    "bind": "/S/utilities/Nginx/config",
                     "container": "/config"
                 }
             ]
@@ -3563,11 +3543,11 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Nginx-Proxy/data",
+                    "bind": "/S/utilities/Nginx-Proxy/data",
                     "container": "/data"
                 },
                 {
-                    "bind": "/portainer/Files/AppData/Config/Nginx-Proxy/letsencrypt",
+                    "bind": "/S/utilities/Nginx-Proxy/letsencrypt",
                     "container": "/etc/letsencrypt"
                 }
             ]
@@ -3589,7 +3569,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Nodered",
+                    "bind": "/S/utilities/Nodered",
                     "container": "/data"
                 }
             ]
@@ -3623,11 +3603,11 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Nzbget",
+                    "bind": "/S/utilities/Nzbget/config",
                     "container": "/config"
                 },
                 {
-                    "bind": "/portainer/Downloads",
+                    "bind": "/S/transfers/downloads",
                     "container": "/downloads"
                 }
             ]
@@ -3661,11 +3641,11 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Nzbhydra2",
+                    "bind": "/S/utilities/Nzbhydra2/config",
                     "container": "/config"
                 },
                 {
-                    "bind": "/portainer/Downloads",
+                    "bind": "/S/transfers/downloads",
                     "container": "/downloads"
                 }
             ]
@@ -3699,7 +3679,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Ombi",
+                    "bind": "/S/utilities/Ombi/config",
                     "container": "/config"
                 }
             ]
@@ -3711,7 +3691,7 @@
             ],
             "title": "Openssh-server",
             "name": "Openssh-server",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/openssh-server/config</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/openssh-server/config</p>",
             "description": "[Openssh-server](https://www.openssh.com/) is a sandboxed environment that allows ssh access without giving keys to the entire server. Giving ssh access via private key often means giving full access to the server. This container creates a limited and sandboxed environment that others can ssh into. The users only have access to the folders mapped and the processes running inside this container.",
             "platform": "linux",
             "logo": "https://upload.wikimedia.org/wikipedia/en/6/65/OpenSSH_logo.png",
@@ -3720,20 +3700,19 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 },
                 {
                     "name": "PUBLIC_KEY",
@@ -3796,7 +3775,7 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/openssh-server/config"
+                    "bind": "/S/utilities/openssh-server/config"
                 }
             ],
             "restart_policy": "unless-stopped"
@@ -3837,7 +3816,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/OpenVPN-AS",
+                    "bind": "/S/utilities/OpenVPN-AS/config",
                     "container": "/config"
                 }
             ]
@@ -3871,7 +3850,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Organizr",
+                    "bind": "/S/utilities/Organizr/config",
                     "container": "/config"
                 }
             ]
@@ -3905,7 +3884,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Overseerr",
+                    "bind": "/S/utilities/Overseerr/config",
                     "container": "/config"
                 }
             ]
@@ -3969,7 +3948,7 @@
             ],
             "title": "Paperless-ng",
             "name": "Paperless-ng",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/paperless-ng/config<br>mkdir -p /volume1/docker/paperless-ng/data</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/paperless-ng/config<br>mkdir -p /S/utilities/paperless-ng/data</p>",
             "description": "[Paperless-ng](https://github.com/jonaswinkler/paperless-ng) is an application by Daniel Quinn and contributors that indexes your scanned documents and allows you to easily search for documents and store metadata alongside your documents.'",
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/jonaswinkler/paperless-ng/master/resources/logo/web/png/Color%20logo%20with%20background.png",
@@ -3978,20 +3957,19 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 },
                 {
                     "name": "REDIS_URL",
@@ -4006,11 +3984,11 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/paperless-ng/config"
+                    "bind": "/S/utilities/paperless-ng/config"
                 },
                 {
                     "container": "/data",
-                    "bind": "/volume1/docker/paperless-ng/data"
+                    "bind": "/S/utilities/paperless-ng/data"
                 }
             ],
             "restart_policy": "unless-stopped"
@@ -4022,7 +4000,7 @@
             ],
             "title": "Papermerge",
             "name": "Papermerge",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/papermerge/config<br>mkdir -p /volume1/docker/papermerge/data</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/papermerge/config<br>mkdir -p /S/utilities/papermerge/data</p>",
             "description": "[Papermerge](https://www.papermerge.com/) is an open source document management system (DMS) primarily designed for archiving and retrieving your digital documents. Instead of having piles of paper documents all over your desk, office or drawers - you can quickly scan them and configure your scanner to directly upload to Papermerge DMS.'",
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/ciur/papermerge/master/artwork/logo.png",
@@ -4031,20 +4009,19 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 },
                 {
                     "name": "REDIS_URL",
@@ -4059,11 +4036,11 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/papermerge/config"
+                    "bind": "/S/utilities/papermerge/config"
                 },
                 {
                     "container": "/data",
-                    "bind": "/volume1/docker/papermerge/data"
+                    "bind": "/S/utilities/papermerge/data"
                 }
             ],
             "restart_policy": "unless-stopped"
@@ -4136,11 +4113,11 @@
                     "container": "/Pictures"
                 },
                 {
-                    "bind": "/portainer/Files/AppData/Photoshow/Thumbs",
+                    "bind": "/S/utilities/Photoshow/Thumbs",
                     "container": "/Thumbs"
                 },
                 {
-                    "bind": "/portainer/Files/AppData/Config/PhotoShow",
+                    "bind": "/S/utilities/PhotoShow/config",
                     "container": "/config"
                 }
             ]
@@ -4149,7 +4126,7 @@
             "type": 1,
             "title": "Phpmyadmin",
             "name": "Phpmyadmin",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/phpmyadmin/config</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/phpmyadmin/config</p>",
             "description": "[Phpmyadmin](https://github.com/phpmyadmin/phpmyadmin/) is a free software tool written in PHP, intended to handle the administration of MySQL over the Web. phpMyAdmin supports a wide range of operations on MySQL and MariaDB.",
             "categories": [
                 "Database Server"
@@ -4161,20 +4138,19 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 },
                 {
                     "name": "PMA_ARBITRARY",
@@ -4195,7 +4171,7 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/phpmyadmin/config"
+                    "bind": "/S/utilities/phpmyadmin/config"
                 }
             ],
             "restart_policy": "unless-stopped"
@@ -4222,11 +4198,11 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/PiHole",
+                    "bind": "/S/utilities/PiHole",
                     "container": "/etc/pihole"
                 },
                 {
-                    "bind": "/portainer/Files/AppData/Config/PiHole/DNS",
+                    "bind": "/S/utilities/PiHole/DNS",
                     "container": "/etc/dnsmasq.d"
                 }
             ]
@@ -4260,7 +4236,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/pi.alert",
+                    "bind": "/S/utilities/pi.alert/config",
                     "container": "/config"
                 }
             ]
@@ -4272,7 +4248,7 @@
             ],
             "title": "Pidgin",
             "name": "Pidgin",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/pidgin/config</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/pidgin/config</p>",
             "description": "[Pidgin](https://pidgin.im/) is a chat program which lets you log into accounts on multiple chat networks simultaneously. This means that you can be chatting with friends on XMPP and sitting in an IRC channel at the same time.",
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/pidgin-logo.png",
@@ -4281,20 +4257,19 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 }
             ],
             "ports": [
@@ -4303,7 +4278,7 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/pidgin/config"
+                    "bind": "/S/utilities/pidgin/config"
                 }
             ],
             "restart_policy": "unless-stopped"
@@ -4337,7 +4312,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/PiWigo",
+                    "bind": "/S/utilities/PiWigo/config",
                     "container": "/config"
                 }
             ]
@@ -4346,7 +4321,7 @@
             "type": 1,
             "title": "Pixapop",
             "name": "Pixapop",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/pixapop/config<br>mkdir -p /volume1/docker/pixapop/photos</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/pixapop/config<br>mkdir -p /S/utilities/pixapop/photos</p>",
             "description": "[Pixapop](https://github.com/bierdok/pixapop) is an open-source single page application to view your photos in the easiest way possible.",
             "categories": [
                 "Photos"
@@ -4358,20 +4333,19 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 },
                 {
                     "name": "APP_USERNAME",
@@ -4392,11 +4366,11 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/pixapop/config"
+                    "bind": "/S/utilities/pixapop/config"
                 },
                 {
                     "container": "/photos",
-                    "bind": "/volume1/docker/pixapop/photos"
+                    "bind": "/S/utilities/pixapop/photos"
                 }
             ],
             "restart_policy": "unless-stopped"
@@ -4433,15 +4407,15 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Plex",
+                    "bind": "/S/utilities/Plex/config",
                     "container": "/config"
                 },
                 {
-                    "bind": "/portainer/TV",
+                    "bind": "/S/plex/tv",
                     "container": "/tv"
                 },
                 {
-                    "bind": "/portainer/Movies",
+                    "bind": "/S/plex/movies",
                     "container": "/movies"
                 }
             ]
@@ -4480,7 +4454,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/PlexRequests",
+                    "bind": "/S/utilities/PlexRequests/config",
                     "container": "/config"
                 }
             ]
@@ -4504,7 +4478,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/ProtonMail-Bridge",
+                    "bind": "/S/utilities/ProtonMail-Bridge/root",
                     "container": "/root"
                 }
             ]
@@ -4513,7 +4487,7 @@
             "type": 1,
             "title": "Pwndrop",
             "name": "Pwndrop",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/pwndrop/config</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/pwndrop/config</p>",
             "description": "[Pwndrop](https://github.com/kgretzky/pwndrop) is a self-deployable file hosting service for sending out red teaming payloads or securely sharing your private files over HTTP and WebDAV.",
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/kgretzky/pwndrop/master/media/pwndrop-logo-512.png",
@@ -4525,20 +4499,19 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 },
                 {
                     "name": "SECRET_PATH",
@@ -4553,7 +4526,7 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/pwndrop/config"
+                    "bind": "/S/utilities/pwndrop/config"
                 }
             ],
             "restart_policy": "unless-stopped"
@@ -4589,11 +4562,11 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/qBittorrent",
+                    "bind": "/S/utilities/qBittorrent/config",
                     "container": "/config"
                 },
                 {
-                    "bind": "/portainer/Downloads",
+                    "bind": "/S/utilities/qBittorrent/downloads",
                     "container": "/downloads"
                 }
             ]
@@ -4605,7 +4578,7 @@
             ],
             "title": "Rdesktop",
             "name": "Rdesktop",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p><br>mkdir -p /volume1/docker/rdesktop/config</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p><br>mkdir -p /S/utilities/rdesktop/config</p>",
             "description": "[Rdesktop](http://xrdp.org/) - Ubuntu based containers containing full desktop environments in officially supported flavors accessible via RDP.",
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/rdesktop.png",
@@ -4615,20 +4588,19 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 }
             ],
             "ports": [
@@ -4641,7 +4613,7 @@
                 },
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/rdesktop/config"
+                    "bind": "/S/utilities/rdesktop/config"
                 }
             ],
             "restart_policy": "unless-stopped"
@@ -4672,14 +4644,14 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Resilio-Sync",
+                    "bind": "/S/utilities/Resilio-Sync/config",
                     "container": "/config"
                 },
                 {
                     "container": "/sync"
                 },
                 {
-                    "bind": "/portainer/Downloads",
+                    "bind": "/S/transfers/downloads",
                     "container": "/downloads"
                 }
             ]
@@ -4706,7 +4678,7 @@
             ],
             "title": "Rsnapshot",
             "name": "Rsnapshot",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/rsnapshot/config<br>mkdir -p /volume1/docker/rsnapshot/.snapshots<br>mkdir -p /volume1/docker/rsnapshot/data</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/rsnapshot/config<br>mkdir -p /S/utilities/rsnapshot/.snapshots<br>mkdir -p /S/utilities/rsnapshot/data</p>",
             "description": "[Rsnapshot](http://www.rsnapshot.org/) is a filesystem snapshot utility based on rsync. rsnapshot makes it easy to make periodic snapshots of local machines, and remote machines over ssh. The code makes extensive use of hard links whenever possible, to greatly reduce the disk space required.'",
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/rsnapshot.png",
@@ -4715,20 +4687,19 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 }
             ],
             "ports": [
@@ -4737,15 +4708,15 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/rsnapshot/config"
+                    "bind": "/S/utilities/rsnapshot/config"
                 },
                 {
                     "container": "/.snapshots",
-                    "bind": "/volume1/docker/rsnapshot/.snapshots"
+                    "bind": "/S/utilities/rsnapshot/.snapshots"
                 },
                 {
                     "container": "/data",
-                    "bind": "/volume1/docker/rsnapshot/data"
+                    "bind": "/S/utilities/rsnapshot/data"
                 }
             ],
             "restart_policy": "unless-stopped"
@@ -4781,11 +4752,11 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/ruTorrent",
+                    "bind": "/S/utilities/ruTorrent/config",
                     "container": "/config"
                 },
                 {
-                    "bind": "/portainer/Downloads",
+                    "bind": "/S/transfers/downloads",
                     "container": "/downloads"
                 }
             ]
@@ -4820,11 +4791,11 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Sabnzbd",
+                    "bind": "/S/utilities/Sabnzbd/config",
                     "container": "/config"
                 },
                 {
-                    "bind": "/portainer/Downloads",
+                    "bind": "/S/transfers/downloads",
                     "container": "/downloads"
                 },
                 {
@@ -4866,15 +4837,15 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Bazarr",
+                    "bind": "/S/utilities/Bazarr/config",
                     "container": "/config"
                 },
                 {
-                    "bind": "/portainer/TV",
+                    "bind": "/S/plex/tv",
                     "container": "/tv"
                 },
                 {
-                    "bind": "/portainer/Movies",
+                    "bind": "/S/plex/movies",
                     "container": "/movies"
                 }
             ]
@@ -4908,15 +4879,15 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Lidarr",
+                    "bind": "/S/utilities/Lidarr/config",
                     "container": "/config"
                 },
                 {
-                    "bind": "/portainer/Downloads",
+                    "bind": "/S/transfers/downloads",
                     "container": "/downloads"
                 },
                 {
-                    "bind": "/portainer/Music",
+                    "bind": "/S/plex/music",
                     "container": "/music"
                 }
             ]
@@ -4950,7 +4921,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Prowlarr",
+                    "bind": "/S/utilities/Prowlarr/config",
                     "container": "/config"
                 }
             ]
@@ -4984,15 +4955,15 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Radarr",
+                    "bind": "/S/utilities/Radarr/config",
                     "container": "/config"
                 },
                 {
-                    "bind": "/portainer/Downloads",
+                    "bind": "/S/transfers/downloads",
                     "container": "/downloads"
                 },
                 {
-                    "bind": "/portainer/Movies",
+                    "bind": "/S/plex/movies",
                     "container": "/movies"
                 }
             ]
@@ -5026,11 +4997,11 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Readarr",
+                    "bind": "/S/utilities/Readarr/config",
                     "container": "/config"
                 },
                 {
-                    "bind": "/portainer/Downloads",
+                    "bind": "/S/transfers/downloads",
                     "container": "/downloads"
                 },
                 {
@@ -5068,7 +5039,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Sonarr",
+                    "bind": "/S/utilities/Sonarr/config",
                     "container": "/config"
                 },
                 {
@@ -5076,11 +5047,11 @@
                     "container": "/dev/rtc"
                 },
                 {
-                    "bind": "/portainer/TV",
+                    "bind": "/S/plex/tv",
                     "container": "/tv"
                 },
                 {
-                    "bind": "/portainer/Downloads",
+                    "bind": "/S/transfers/downloads",
                     "container": "/downloads"
                 }
             ]
@@ -5121,7 +5092,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Shiori",
+                    "bind": "/S/utilities/Shiori",
                     "container": "/srv/shiori"
                 }
             ]
@@ -5155,11 +5126,11 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Smokeping",
+                    "bind": "/S/utilities/Smokeping/config",
                     "container": "/config"
                 },
                 {
-                    "bind": "/portainer/Files/AppData/Smokeping",
+                    "bind": "/S/utilities/Smokeping",
                     "container": "/data"
                 }
             ]
@@ -5171,7 +5142,7 @@
             ],
             "title": "Snapdrop",
             "name": "Snapdrop",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/snapdrop/config</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/snapdrop/config</p>",
             "description": "[Snapdrop](https://github.com/RobinLinus/snapdrop) A local file sharing in your browser. Inspired by Apple's Airdrop.",
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/RobinLinus/snapdrop/master/client/images/logo_transparent_512x512.png",
@@ -5180,20 +5151,19 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 }
             ],
             "ports": [
@@ -5203,7 +5173,7 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/snapdrop/config"
+                    "bind": "/S/utilities/snapdrop/config"
                 }
             ],
             "restart_policy": "unless-stopped"
@@ -5226,7 +5196,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Snibox",
+                    "bind": "/S/utilities/Snibox",
                     "container": "/app/db/database"
                 }
             ]
@@ -5238,7 +5208,7 @@
             ],
             "title": "Snipe-it",
             "name": "Snipe-it",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/snipe-it/config</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/snipe-it/config</p>",
             "description": "Snipe-it makes asset management easy. It was built by people solving real-world IT and asset management problems, and a solid UX has always been a top priority. Straightforward design and bulk actions mean getting things done faster.",
             "platform": "linux",
             "logo": "https://s3-us-west-2.amazonaws.com/linuxserver-docs/images/snipe-it-logo500x500.png",
@@ -5247,13 +5217,13 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
@@ -5299,7 +5269,7 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/snipe-it/config"
+                    "bind": "/S/utilities/snipe-it/config"
                 }
             ],
             "restart_policy": "unless-stopped"
@@ -5357,7 +5327,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Syncthing",
+                    "bind": "/S/utilities/Syncthing/config",
                     "container": "/config"
                 },
                 {
@@ -5369,7 +5339,7 @@
             "type": 1,
             "title": "Syslog-ng",
             "name": "Syslog-ng",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/syslog-ng/config<br></p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/syslog-ng/config<br></p>",
             "description": "[syslog-ng](https://www.syslog-ng.com/products/open-source-log-management/) allows you to flexibly collect, parse, classify, rewrite and correlate logs from across your infrastructure and store or route them to log analysis tools.",
             "categories": [
                 "Task Server"
@@ -5381,20 +5351,19 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 }
             ],
             "ports": [
@@ -5405,7 +5374,7 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/syslog-ng/config"
+                    "bind": "/S/utilities/syslog-ng/config"
                 },
                 {
                     "container": "/var/log",
@@ -5448,7 +5417,7 @@
                     "container": "/logs"
                 },
                 {
-                    "bind": "/portainer/Files/AppData/Config/Tautulli",
+                    "bind": "/S/utilities/Tautulli/config",
                     "container": "/config"
                 }
             ]
@@ -5470,7 +5439,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/TiddlyWiki",
+                    "bind": "/S/utilities/TiddlyWiki",
                     "container": "/var/lib/tiddlywiki"
                 }
             ]
@@ -5504,7 +5473,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/tt-rss",
+                    "bind": "/S/utilities/tt-rss/config",
                     "container": "/config"
                 }
             ]
@@ -5539,7 +5508,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Transmission",
+                    "bind": "/S/utilities/Transmission/config",
                     "container": "/config"
                 },
                 {
@@ -5602,7 +5571,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Downloads",
+                    "bind": "/S/transfers/downloads",
                     "container": "/data"
                 },
                 {
@@ -5639,7 +5608,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/trilium-data",
+                    "bind": "/S/utilities/trilium-data",
                     "container": "/home/node/trilium-data"
                 }
             ]
@@ -5725,7 +5694,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Unifi",
+                    "bind": "/S/utilities/Unifi/config",
                     "container": "/config"
                 }
             ]
@@ -5747,7 +5716,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/UptimeKuma",
+                    "bind": "/S/utilities/UptimeKuma",
                     "container": "/app/data"
                 }
             ]
@@ -5770,7 +5739,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Vaultwarden",
+                    "bind": "/S/utilities/Vaultwarden/config",
                     "container": "/config"
                 }
             ]
@@ -5868,11 +5837,11 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/WebGrabPlus",
+                    "bind": "/S/utilities/WebGrabPlus/config",
                     "container": "/config"
                 },
                 {
-                    "bind": "/portainer/Files/AppData/WebGrabPlus",
+                    "bind": "/S/utilities/WebGrabPlus",
                     "container": "/data"
                 }
             ]
@@ -5881,7 +5850,7 @@
             "type": 1,
             "title": "Webtop",
             "name": "Webtop",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/webtop/config<br></p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/webtop/config<br></p>",
             "description": "[Webtop](https://github.com/linuxserver/docker-webtop) - Alpine, Ubuntu, Fedora, and Arch based containers containing full desktop environments in officially supported flavors accessible via any modern web browser.",
             "categories": [
                 "Management Utility Server"
@@ -5894,20 +5863,19 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 },
                 {
                     "name": "SUBFOLDER",
@@ -5922,7 +5890,7 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/webtop/config"
+                    "bind": "/S/utilities/webtop/config"
                 },
                 {
                     "container": "/var/run/docker.sock",
@@ -5948,7 +5916,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Whoogle",
+                    "bind": "/S/utilities/Whoogle/config",
                     "container": "/config"
                 }
             ]
@@ -5970,11 +5938,11 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/Wikijs",
+                    "bind": "/S/utilities/Wikijs/config",
                     "container": "/config"
                 },
                 {
-                    "bind": "/portainer/Files/AppData/Config/Wikijs/data",
+                    "bind": "/S/utilities/Wikijs/data",
                     "container": "/data"
                 }
             ]
@@ -5986,7 +5954,7 @@
             ],
             "title": "Wireguard",
             "name": "Wireguard",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/wireguard/config<br></p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/wireguard/config<br></p>",
             "description": "[WireGuard®](https://www.wireguard.com/) is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography. It aims to be faster, simpler, leaner, and more useful than IPsec, while avoiding the massive headache. It intends to be considerably more performant than OpenVPN. WireGuard is designed as a general purpose VPN for running on embedded interfaces and super computers alike, fit for many different circumstances. Initially released for the Linux kernel, it is now cross-platform (Windows, macOS, BSD, iOS, Android) and widely deployable. It is currently under heavy development, but already it might be regarded as the most secure, easiest to use, and simplest VPN solution in the industry.",
             "platform": "linux",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Logo_of_WireGuard.png/320px-Logo_of_WireGuard.png",
@@ -5995,20 +5963,19 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 },
                 {
                     "name": "SERVERURL",
@@ -6053,7 +6020,7 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/wireguard/config"
+                    "bind": "/S/utilities/wireguard/config"
                 },
                 {
                     "container": "/lib/modules",
@@ -6069,7 +6036,7 @@
             "type": 1,
             "title": "Wireshark",
             "name": "Wireshark",
-            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/wireshark/config</p>",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /S/utilities/wireshark/config</p>",
             "description": "[Wireshark](https://www.wireshark.org/) is the world’s foremost and widely-used network protocol analyzer. It lets you see what’s happening on your network at a microscopic level and is the de facto (and often de jure) standard across many commercial and non-profit enterprises, government agencies, and educational institutions. Wireshark development thrives thanks to the volunteer contributions of networking experts around the globe and is the continuation of a project started by Gerald Combs in 1998.",
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/wireshark-icon.png",
@@ -6079,20 +6046,19 @@
                 {
                     "name": "PUID",
                     "label": "PUID",
-                    "default": "1024",
+                    "default": "1000",
                     "description": "for GroupID"
                 },
                 {
                     "name": "PGID",
                     "label": "PGID",
-                    "default": "100",
+                    "default": "1000",
                     "description": "for UserID"
                 },
                 {
                     "name": "TZ",
                     "label": "TZ",
-                    "default": "Europe/Amsterdam",
-                    "description": "Specify a timezone to use for example Europe/Amsterdam"
+                    "default": "America/Chicago"
                 }
             ],
             "ports": [
@@ -6101,7 +6067,7 @@
             "volumes": [
                 {
                     "container": "/config",
-                    "bind": "/volume1/docker/wireshark/config"
+                    "bind": "/S/utilities/wireshark/config"
                 }
             ],
             "restart_policy": "unless-stopped"
@@ -6156,7 +6122,7 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "yacht",
+                    "bind": "yacht/config",
                     "container": "/config"
                 },
                 {
@@ -6182,23 +6148,23 @@
             "type": 1,
             "volumes": [
                 {
-                    "bind": "/portainer/Files/AppData/Config/YTDLM",
+                    "bind": "/S/utilities/YTDLM",
                     "container": "/app/appdata"
                 },
                 {
-                    "bind": "/portainer/Files/AppData/Youtube/Video",
+                    "bind": "/S/utilities/Youtube/Video",
                     "container": "/app/video"
                 },
                 {
-                    "bind": "/portainer/Files/AppData/Youtube/Subscriptions",
+                    "bind": "/S/utilities/Youtube/Subscriptions",
                     "container": "/app/subscriptions"
                 },
                 {
-                    "bind": "/portainer/Files/AppData/Youtube/Users",
+                    "bind": "/S/utilities/Youtube/Users",
                     "container": "/app/users"
                 },
                 {
-                    "bind": "/portainer/Files/AppData/Youtube/Audio",
+                    "bind": "/S/utilities/Youtube/Audio",
                     "container": "/app/audio"
                 }
             ]
