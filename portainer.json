@@ -2427,6 +2427,58 @@
             ]
         },
         {
+            "type": 1,
+            "title": "Kdenlive",
+            "name": "Kdenlive",
+            "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/kdenlive/config</p>",
+            "description": "[Kdenlive](https://kdenlive.org/) is a powerful free and open source cross-platform video editing program made by the KDE community. Feature rich and production ready.",
+            "platform": "linux",
+            "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/kdenlive-logo.png",
+            "image": "linuxserver/kdenlive:latest",
+            "env": [
+                {
+                    "name": "PUID",
+                    "label": "PUID",
+                    "default": "1024",
+                    "description": "for UserID"
+                },
+                {
+                    "name": "PGID",
+                    "label": "PGID",
+                    "default": "100",
+                    "description": "for GroupID"
+                },
+                {
+                    "name": "TZ",
+                    "label": "TZ",
+                    "default": "America/Chicago",
+                    "description": "Specify a timezone to use for example America/Chicago"
+                },
+                {
+                    "name": "SUBFOLDER",
+                    "label": "SUBFOLDER",
+                    "default": "/",
+                    "description": "Specify a subfolder to use with reverse proxies, IE `/subfolder/`"
+                },
+                {
+                    "name": "KEYBOARD",
+                    "label": "KEYBOARD",
+                    "default": "en-us-qwerty",
+                    "description": "See the keyboard layouts section for more information and options."
+                }
+            ],
+            "ports": [
+                "3000:3000/tcp"
+            ],
+            "volumes": [
+                {
+                    "container": "/config",
+                    "bind": "/volume1/docker/kdenlive/config"
+                }
+            ],
+            "restart_policy": "unless-stopped"
+        },
+        {
             "categories": [
                 "Media Server"
             ],
@@ -4459,6 +4511,59 @@
                 }
             ]
         },
+
+        {
+			"type": 1,
+			"title": "Projectsend",
+			"name": "Projectsend",
+			"note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/projectsend/config<br>mkdir -p /volume1/docker/projectsend/data</p>",
+			"description": "[Projectsend](http://www.projectsend.org) is a self-hosted application that lets you upload files and assign them to specific clients that you create yourself. Secure, private and easy. No more depending on external services or e-mail to send those files.",
+			"platform": "linux",
+			"logo": "http://www.projectsend.org/wp-content/themes/projectsend/img/screenshots.png",
+			"image": "linuxserver/projectsend:latest",
+			"env": [
+				{
+					"name": "PUID",
+					"label": "PUID",
+					"default": "1024",
+					"description": "for UserID"
+				},
+				{
+					"name": "PGID",
+					"label": "PGID",
+					"default": "100",
+					"description": "for GroupID"
+				},
+				{
+					"name": "TZ",
+					"label": "TZ",
+					"default": "America/Chicago",
+					"description": "Specify a timezone to use for example America/Chicago"
+				},
+				{
+					"name": "MAX_UPLOAD",
+					"label": "MAX_UPLOAD",
+					"default": "5000",
+					"description": "To set maximum upload size (in MB), default if unset is 5000."
+				}
+			],
+			"ports": [
+				"80:80/tcp"
+			],
+			"volumes": [
+			{
+				"container": "/config",
+				"bind": "/volume1/docker/projectsend/config"
+			},
+			{
+				"container": "/data",
+				"bind": "/volume1/docker/projectsend/data"
+			}
+			],
+			"restart_policy": "unless-stopped"
+		},
+
+
         {
             "categories": [
                 "Email"
