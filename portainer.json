@@ -33,7 +33,7 @@
 					"name": "CONFIGFILE",
 					"label": "CONFIGFILE",
 					"default": "/config/adguardhome-sync.yaml",
-					"description": "Set a custom config file."
+					"description": "Set a custom config file"
 				}
 			],
 			"ports": [
